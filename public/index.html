@@ -1,43 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Israel Bordones</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/public/assets/CV.css">
+</head>
+<body data-theme="dark">
+    <!-- Header Principal -->
+    <header class="cv-header container">
+        <div class="profile-section">
+            <div class="image-container">
+                <img src="assets/3bdab15f-d4cc-40eb-a9e4-00af2c63ea9d.jpg" alt="Israel Bordones" class="profile-img"
+                style ="width: 250px; height: 250px; object-fit: cover; border-radius: 50%;"
+                onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face'">
+            </div>
+            <div class="profile-info">
+                <h1 class="name">Israel Abdías Bordones Rodríguez</h1>
+                <h2 class="title">Acerca de</h2>
+                <p class="description">
+                    Soy un principiante con experiencia inicial 
+                    en servicios de software y respaldo de datos,
+                    además de formación en administración de empresas
+                    con mención en Recursos Humanos. 
+                    Estoy comprometido con el aprendizaje continuo 
+                    y en contribuir con soluciones valiosas para la empresa.
+                </p>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <span class="icon">📧</span>
+                    <a href="mailto:israelbordones2006@gmail.com" class="contact-link">israelbordones2006@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📱</span>
+                    <a href="tel:+56 9 8812 7156" class="contact-link">+56 9 8812 7156</a>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📍</span>
+                    <span>Puente Alto, Chile</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">💼</span>
+                    <a href="https://linkedin.com/in/israelbordones" target="_blank" class="contact-link">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">💻</span>
+                    <a href="https://github.com/israelbordones" target="_blank" class="contact-link">GitHub</a>
+                </div>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+            </div>
+        </div>
+    </header>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <main class="container">
+        <div class="grid">
+            <!-- Columna Izquierda - Contenido Principal -->
+            <div class="main-content">
+                <!-- Experiencia Laboral -->
+                <section class="content-section">
+                    <h2 class="section-title">💼 Experiencia Laboral</h2>
+                    
+                    <article class="timeline-item">
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+                        <ul class="responsibilities">
+                            <li>2023 - 2024</li>
+                            <li>Colegio Renacer Sede Básica</li>
+                            <li>Santiago</li>
+                            <li>Mantenimiento de computadoras en sede</li>
+                            <li>Tareas Administrativas</li>
+                            <li>2024 - Presente</li>
+                            <li>Independiente</li>
+                            <li>Servicio de Formateo y mantención de computadoras</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-header">
+                            <h3>Listado Descriptivo</h3>
+                            <div class="company-info">
+                                <strong></strong>
+                                <span class="date"></span>
+                            </div>
+                        </div>
+                        <ul class="responsibilities">
+                            <li>RUT: 22.068.757-0</li>
+                            <li>Dirección: Av. Ejercito Libertador 01321</li>
+                            <li>Edad: 19 años</li>
+                            <li>Estado Civil: Soltero</li>
+                            <li>Nacionalidad: Chilena</li>
+                        </ul>
+                    </article>
+                </section>
+
+                
+            </div>
+
+            <!-- Columna Derecha - Sidebar -->
+            <div class="sidebar">
+                <!-- Habilidades Técnicas -->
+                <section class="sidebar-section">
+                    <h2 class="section-title">⚡ Habilidades Técnicas</h2>
+                    
+                    <div class="skills-category">
+                        
+                        <div class="skills-grid">
+                            <p>Administrador.</p>
+                            <p>Mantenimiento de Computadoras.</p>
+                            <p>Incluye Formateo, instalación de software</p>
+                            <p>empresarial/ofimático y Respaldo de Archivos.</p>
+                            <p>Nivel Básico en EXCEL, WORD y POWERPOINT.</p>
+                            <p>Programador Junior en:</p>
+                            <p>Python, Java, Html5, CSS y JavaScript</p>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- Idiomas -->
+                <section class="sidebar-section">
+                    <h2 class="section-title">🌍 Idiomas</h2>
+                    <div class="languages-list">
+                        <div class="language-item">
+                            <span class="language-name">Español</span>
+                            <span class="language-level native">Nativo</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="language-name">Inglés</span>
+                            <span class="language-level advanced">Intermedio</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Educacion -->
+                <section class="sidebar-section">
+                    <h2 class="section-title">📚 Educación</h2>
+                    <div class="certifications-list">
+                        <div class="certification-item">
+                            <strong>Básica - Colegio Renacer </strong>
+                            <span>2009-2019</span>
+                        </div>
+                        <div class="certification-item">
+                            <strong>Media / Técnico - Colegio Renacer Técnico Profesional</strong>
+                            <span>2020-2023</span>
+                        </div>
+                        <div class="certification-item">
+                            <strong>Profesional - Duoc UC sede Puente Alto</strong>
+                            <span>2024 - Presente</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contacto Rápido -->
+                <section class="sidebar-section">
+                    <h2 class="section-title">📞 Contacto Rápido</h2>
+                    <div class="quick-contact">
+                        <a href="mailto:israelbordones2006@gmail.com" class="contact-button primary">
+                            📧 Enviar Email
+                        </a>
+                        <a href="https://wa.me/56988127156" target="_blank" class="contact-button secondary">
+                            💬 WhatsApp
+                        </a>
+                        <a href="https://www.linkedin.com/in/israel-abd%C3%ADas-bordones-rodr%C3%ADguez-60b6a6382/" target="_blank" class="contact-button tertiary">
+                            💼 LinkedIn
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container">
+        <div class="footer-content">
+            <p>&copy; 2025 Israel Bordones. Todos los derechos reservados.</p>
+
+        </div>
+    </footer>
+</body>
 </html>

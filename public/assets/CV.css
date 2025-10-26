@@ -1,0 +1,481 @@
+/* Variables de colores para tema oscuro con acentos */
+:root {
+    --primary: #6d28d9;
+    --primary-hover: #7c3aed;
+    --secondary: #06b6d4;
+    --accent: #10b981;
+    --text: #f8fafc;
+    --text-muted: #cbd5e1;
+    --background: #0f172a;
+    --surface: #1e293b;
+    --border: #334155;
+    --card-bg: #1e293b;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+}
+
+/* Configuración base */
+body {
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header del CV */
+.cv-header {
+    text-align: center;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+/* Contenedor de imagen con bordes decorativos */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;   /* ajusta según tamaño deseado */
+    height: 120px;
+    margin: 0 auto; /* fuerza centrado horizontal */
+    position: relative;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary);
+    position: relative;
+    z-index: 2;
+}
+
+.image-border {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+    z-index: 1;
+    animation: rotateBorder 8s linear infinite;
+}
+
+@keyframes rotateBorder {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.profile-info {
+    text-align: center;
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name, .title, .description {
+    text-align: center;
+    width: 100%;
+}
+
+/* Información de contacto */
+.contact-info {
+    margin-top: 2rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: var(--surface);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+}
+
+.contact-link {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--primary);
+}
+
+/* Layout principal */
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+/* Secciones de contenido */
+.content-section, .sidebar-section {
+    margin-bottom: 2.5rem;
+}
+
+.section-title {
+    color: var(--secondary);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Timeline para experiencia */
+.timeline-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 2rem;
+    width: 20px;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+.timeline-header h3 {
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.company-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.date {
+    background: var(--primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+}
+
+.responsibilities {
+    list-style: none;
+    padding: 0;
+}
+
+.responsibilities li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.responsibilities li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+/* Tarjetas de proyectos */
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+}
+
+.project-description {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-tag {
+    background: var(--surface);
+    color: var(--secondary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    border: 1px solid var(--border);
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--primary-hover);
+}
+
+/* Habilidades */
+.skills-category {
+    margin-bottom: 1.5rem;
+}
+
+.skills-category h4 {
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Idiomas */
+.languages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: var(--surface);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.language-level {
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.language-level.native {
+    background: var(--success);
+    color: white;
+}
+
+.language-level.advanced {
+    background: var(--primary);
+    color: white;
+}
+
+.language-level.intermediate {
+    background: var(--warning);
+    color: black;
+}
+
+/* Certificaciones */
+.certifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.certification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: var(--surface);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+/* Contacto rápido */
+.quick-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.contact-button.primary {
+    background: var(--primary);
+    color: white;
+}
+
+.contact-button.primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.contact-button.secondary {
+    background: var(--success);
+    color: white;
+}
+
+.contact-button.secondary:hover {
+    background: #0da271;
+    transform: translateY(-2px);
+}
+
+.contact-button.tertiary {
+    background: var(--secondary);
+    color: white;
+}
+
+.contact-button.tertiary:hover {
+    background: #0891b2;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .profile-section {
+        text-align: center;
+    }
+    
+    .name {
+        font-size: 2rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .company-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .image-container {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0.5rem;
+    }
+    
+    .cv-header {
+        padding: 1rem 0;
+    }
+    
+    .timeline-item, .project-card {
+        padding: 1rem;
+    }
+    
+    .skills-grid {
+        justify-content: center;
+    }
+    
+}
