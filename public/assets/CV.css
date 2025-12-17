@@ -374,6 +374,6 @@ footer {
     background-color: #2c3e50; /* Color de fondo si la imagen no carga */
     
     /* Para debug - borde rojo si hay problema */
-    border: 2px solid red !important;
+    border: 2px solid rgb(0, 204, 255) !important;
 }
 }
